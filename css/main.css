@@ -102,7 +102,7 @@ textarea {
     padding: 10px;
 }
 
-#view_adm, #view_aposta {
+#view_adm, #view_apostas {
     display: none;
 }
 
@@ -153,6 +153,10 @@ div.grid {
     padding: 10px;
 }
 
+.div_buttons {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
 
 
 /* ==========================================================================

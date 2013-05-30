@@ -29,10 +29,14 @@
             </div>
             <div id="menu">
                 <button onclick="showViewAdm()">Administração</button>
-                <button onclick="showViewAposta()">Nova Aposta</button>
+                <button onclick="showViewApostas()">Apostas</option>
             </div>
             <div id="content">
                 <div id="view_adm">
+                    <div class="div_buttons">
+                        <button>Exportar</button>
+                        <button>Importar</button>
+                    </div>
                     <div id="view_adm_times">
                         <h2>Times</h2>
                         <div>
@@ -41,6 +45,7 @@
                         <div class="grid">
                             <table>
                                 <tr>
+                                    <th>Codigo</th>
                                     <th>Nome</th>
                                 </tr>
                             </table>
@@ -75,24 +80,30 @@
                         </div>
                     </div>
                 </div>
-                <div id="view_aposta">
+                <div id="view_apostas">
+                    <h2>Apostas</h2>
+                    <div id="view_apostas_jogos" class="box-bordered">
+                        <div>
+                            <select onchange="onChangeViewApostasJogosJogo()" id="view_apostas_jogos_jogo"><option value="">Selecione o Jogo...</option></select>
+                        </div>
+                    </div>
                     <h2>Nova Aposta</h2>
                     <div class="form box-bordered">
                         <div>
                             <div>Jogo</div>
-                            <div><select id="view_aposta_form_jogo"></select></div>
+                            <div><select id="view_apostas_form_jogo"></select></div>
                         </div>
                         <div>
                             <div>Apostador</div>
-                            <div><select id="view_aposta_form_apostador"></select></div>
+                            <div><select id="view_apostas_form_apostador"></select></div>
                         </div>
                         <div>
                             <div>Valor</div>
-                            <div><input type="text" id="view_aposta_form_valor"/></div>
+                            <div><input type="text" id="view_apostas_form_valor"/></div>
                         </div>
                         <div>
                             <div>Pago?</div>
-                            <div><input type="checkbox" id="view_aposta_form_pago"/></div>
+                            <div><input type="checkbox" id="view_apostas_form_pago"/></div>
                         </div>
                         <div>
                             <div>&nbsp;</div>
@@ -140,11 +151,17 @@
                 </div>
                 <div>
                     <div><span>Hora</span></div>
-                    <div><input type="text" id="form_novo_jogo_hora"/></div>
+                    <div>
+                        <select id="form_novo_jogo_horas">
+                        </select>
+                        :
+                        <select id="form_novo_jogo_minutos">
+                        </select>
+                    </div>
                 </div>
                 <div>
                     <div>&nbsp;</div>
-                    <div><button>Salvar</button></div>
+                    <div><button onclick="salvarNovoJogo()">Salvar</button></div>
                 </div>
             </div>
         </div>
